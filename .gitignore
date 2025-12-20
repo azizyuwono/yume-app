@@ -1,0 +1,130 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Generated files
+*.g.dart
+*.g.dart.bak
+*.freezed.dart
+*.mocks.dart
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Android Keystore & Signing
+*.jks
+*.keystore
+key.properties
+/android/key.properties
+/android/app/key.properties
+
+# Environment Configuration
+.env
+.env.*
+!.env.example
+*.env.local
+*.env.production
+*.env.staging
+
+# Logs and Crash Reports
+*.log
+logs/
+crash_reports/
+firebase_app_id_file.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# Fastlane
+/android/fastlane/report.xml
+/android/fastlane/Preview.html
+/android/fastlane/screenshots
+/android/fastlane/test_output
+/ios/fastlane/report.xml
+/ios/fastlane/Preview.html
+/ios/fastlane/screenshots
+/ios/fastlane/test_output
+
+# Web
+/web/flutter_service_worker.js
+/web/version.json
+
+# Generated plugin registrant
+**/generated_plugin_registrant.dart
+
+# FVM (Flutter Version Management)
+.fvm/
+.fvm/flutter_sdk
+
+# Artifacts
+*.apk
+*.aab
+*.ipa
+*.app

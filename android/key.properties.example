@@ -1,0 +1,14 @@
+# Android Signing Configuration Template
+# Copy this file to key.properties and fill in your actual values
+# IMPORTANT: key.properties is in .gitignore - DO NOT commit it!
+
+storePassword=your-keystore-password
+keyPassword=your-key-password
+keyAlias=yume-release-key
+storeFile=../release-keystore.jks
+
+# To generate a keystore, run:
+# keytool -genkey -v -keystore release-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias yume-release-key
+#
+# This will create release-keystore.jks file which should be placed in android/ directory
+# IMPORTANT: Keep this keystore file safe and NEVER commit it to version control!
