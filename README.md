@@ -83,8 +83,8 @@ lib/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/yume_app.git
-cd yume_app
+git clone https://github.com/azizyuwono/yume-app.git
+cd yume-app
 ```
 
 ### 2. Install Dependencies
