@@ -128,3 +128,6 @@ firebase-debug.*.log
 *.aab
 *.ipa
 *.app
+
+# Antigravity/Agent workflows (local development)
+.agent/
