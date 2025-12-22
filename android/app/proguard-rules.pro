@@ -46,3 +46,7 @@
 -keepclassmembers class * implements android.os.Parcelable {
     static ** CREATOR;
 }
+
+# Google Play Core (often required by plugins even if not explicitly used)
+-keep class com.google.android.play.core.** { *; }
+-dontwarn com.google.android.play.core.**
