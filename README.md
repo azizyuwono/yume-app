@@ -24,7 +24,11 @@ A beautiful Flutter mobile app that generates stunning, personalized wallpapers 
 
 ## 📸 Screenshots
 
-*Coming soon - Add screenshots here*
+<p align="center">
+  <img src="assets/screenshots/home_mobile.png" width="250" alt="Home Screen" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/screenshots/create_mobile.png" width="250" alt="Create Screen" />
+</p>
 
 ## 🛠️ Tech Stack
 
