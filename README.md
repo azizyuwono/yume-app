@@ -30,6 +30,17 @@ A beautiful Flutter mobile app that generates stunning, personalized wallpapers 
   <img src="assets/screenshots/create_mobile.png" width="250" alt="Create Screen" />
 </p>
 
+## 📥 Download & Demo
+
+Try the app on your Android device:
+
+[![Download Android APK](https://img.shields.io/badge/Download-Android%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white)](releases/yume-android-release.apk)
+
+> **Note for iOS Users:**
+> The iOS version requires a macOS environment to build. The project is fully configured for iOS (including icons and assets). To build for iOS:
+> 1. Open the project on a Mac
+> 2. Run `flutter build ipa`
+
 ## 🛠️ Tech Stack
 
 - **Framework:** [Flutter](https://flutter.dev) 3.10.4+
