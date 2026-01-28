@@ -1,30 +1,21 @@
-import 'package:dio/dio.dart';
+// ignore_for_file: use_setters_to_change_properties
+
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../core/services/storage_service.dart';
-import '../../../core/utils/result.dart';
-import '../data/datasources/pollinations_datasource.dart';
-import '../data/repositories/wallpaper_repository_impl.dart';
-import '../domain/art_style.dart';
-import '../domain/entities/generation_state.dart';
-import '../domain/repositories/wallpaper_repository.dart';
+import 'package:yume_app/core/network/dio_provider.dart';
+import 'package:yume_app/core/services/storage_service.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/create/data/datasources/pollinations_datasource.dart';
+import 'package:yume_app/features/create/data/repositories/wallpaper_repository_impl.dart';
+import 'package:yume_app/features/create/domain/art_style.dart';
+import 'package:yume_app/features/create/domain/entities/generation_state.dart';
+import 'package:yume_app/features/create/domain/repositories/wallpaper_repository.dart';
 
 part 'create_providers.g.dart';
 
 // =============================================================================
 // DEPENDENCY INJECTION
 // =============================================================================
-
-/// Provides Dio HTTP client
-@riverpod
-Dio dio(Ref ref) {
-  return Dio(
-    BaseOptions(
-      connectTimeout: const Duration(seconds: 30),
-      receiveTimeout: const Duration(seconds: 30),
-    ),
-  );
-}
 
 /// Provides PollinationsDataSource
 @riverpod

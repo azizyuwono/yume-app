@@ -95,7 +95,7 @@ class SnackBarService {
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: Colors.black.withValues(alpha: 0.06), width: 1),
+        side: BorderSide(color: Colors.black.withValues(alpha: 0.06)),
       ),
       duration: item.duration,
       elevation: 0,

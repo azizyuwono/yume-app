@@ -1,4 +1,4 @@
-import '../../../../core/utils/result.dart';
+import 'package:yume_app/core/utils/result.dart';
 
 /// Abstract repository for wallpaper generation
 abstract class WallpaperRepository {

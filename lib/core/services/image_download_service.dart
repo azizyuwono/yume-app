@@ -3,8 +3,8 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:gal/gal.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../utils/result.dart';
-import '../widgets/permission_dialog.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/core/widgets/permission_dialog.dart';
 
 part 'image_download_service.g.dart';
 
@@ -23,10 +23,14 @@ class ImageDownloadService {
   Future<bool> requestStoragePermission(BuildContext context) async {
     // Check if already granted
     final hasAccess = await Gal.hasAccess();
-    if (hasAccess) return true;
+    if (hasAccess) {
+      return true;
+    }
 
     // Check if context is still valid before showing dialog
-    if (!context.mounted) return false;
+    if (!context.mounted) {
+      return false;
+    }
 
     // Show permission dialog to inform user
     final userConsent = await PermissionDialog.show(
@@ -37,10 +41,12 @@ class ImageDownloadService {
       icon: Icons.photo_library_rounded,
     );
 
-    if (!userConsent) return false;
+    if (!userConsent) {
+      return false;
+    }
 
     // Request permission
-    return await Gal.requestAccess();
+    return Gal.requestAccess();
   }
 
   /// Downloads an image from URL and saves it to the gallery
@@ -74,7 +80,9 @@ class ImageDownloadService {
         for (var i = 0; i < 4; i++) {
           await Future.delayed(const Duration(milliseconds: 500));
           fileInfo = await cacheManager.getFileFromCache(imageUrl);
-          if (fileInfo != null) break;
+          if (fileInfo != null) {
+            break;
+          }
         }
       }
 

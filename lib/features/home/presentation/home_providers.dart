@@ -1,10 +1,12 @@
+// ignore_for_file: use_setters_to_change_properties
+
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../core/services/storage_service.dart';
-import '../../../core/utils/result.dart';
-import '../data/repositories/home_repository_impl.dart';
-import '../domain/repositories/home_repository.dart';
-import '../domain/wallpaper.dart';
+import 'package:yume_app/core/services/storage_service.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/home/data/repositories/home_repository_impl.dart';
+import 'package:yume_app/features/home/domain/repositories/home_repository.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 part 'home_providers.g.dart';
 

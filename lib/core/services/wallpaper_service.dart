@@ -5,7 +5,7 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:wallpaper_manager_plus/wallpaper_manager_plus.dart';
 
-import '../utils/result.dart';
+import 'package:yume_app/core/utils/result.dart';
 
 part 'wallpaper_service.g.dart';
 

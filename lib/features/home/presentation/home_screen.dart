@@ -6,13 +6,13 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../core/router/app_router.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../../core/theme/theme_provider.dart';
-import '../../../core/widgets/sliver_shimmer_grid.dart';
-import 'home_providers.dart';
-import 'widgets/category_chips.dart';
-import 'widgets/wallpaper_card.dart';
+import 'package:yume_app/core/router/app_router.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
+import 'package:yume_app/core/theme/theme_provider.dart';
+import 'package:yume_app/core/widgets/sliver_shimmer_grid.dart';
+import 'package:yume_app/features/home/presentation/home_providers.dart';
+import 'package:yume_app/features/home/presentation/widgets/category_chips.dart';
+import 'package:yume_app/features/home/presentation/widgets/wallpaper_card.dart';
 
 /// Home Screen - Zen Gallery with masonry grid and animations
 class HomeScreen extends ConsumerStatefulWidget {
@@ -39,7 +39,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     _titleFade = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: const Interval(0.0, 0.6, curve: Curves.easeOut),
+        curve: const Interval(0, 0.6, curve: Curves.easeOut),
       ),
     );
 
@@ -47,7 +47,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         .animate(
           CurvedAnimation(
             parent: _controller,
-            curve: const Interval(0.0, 0.6, curve: Curves.easeOutCubic),
+            curve: const Interval(0, 0.6, curve: Curves.easeOutCubic),
           ),
         );
 
@@ -115,9 +115,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
                       duration: const Duration(milliseconds: 300),
                       transitionBuilder: (child, animation) =>
                           RotationTransition(
-                            turns: Tween(
-                              begin: 0.0,
-                              end: 1.0,
+                            turns: Tween<double>(
+                              begin: 0,
+                              end: 1,
                             ).animate(animation),
                             child: FadeTransition(
                               opacity: animation,

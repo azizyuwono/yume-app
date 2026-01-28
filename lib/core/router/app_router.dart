@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../widgets/scaffold_with_nav_bar.dart';
-import '../../features/home/presentation/home_screen.dart';
-import '../../features/create/presentation/create_screen.dart';
-import '../../features/history/presentation/history_screen.dart';
-import '../../features/preview/presentation/preview_screen.dart';
+import 'package:yume_app/core/widgets/scaffold_with_nav_bar.dart';
+import 'package:yume_app/features/create/presentation/create_screen.dart';
+import 'package:yume_app/features/history/presentation/history_screen.dart';
+import 'package:yume_app/features/home/presentation/home_screen.dart';
+import 'package:yume_app/features/preview/presentation/preview_screen.dart';
 
 /// App route paths
 abstract final class AppRoutes {
@@ -22,7 +21,6 @@ final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 final GoRouter appRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
   initialLocation: AppRoutes.home,
-  debugLogDiagnostics: false,
   routes: <RouteBase>[
     // Main shell with bottom navigation
     StatefulShellRoute.indexedStack(
@@ -107,7 +105,7 @@ final GoRouter appRouter = GoRouter(
             return FadeTransition(
               opacity: animation,
               child: ScaleTransition(
-                scale: Tween<double>(begin: 0.95, end: 1.0).animate(
+                scale: Tween<double>(begin: 0.95, end: 1).animate(
                   CurvedAnimation(
                     parent: animation,
                     curve: Curves.easeOutCubic,

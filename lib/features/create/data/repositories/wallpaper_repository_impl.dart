@@ -1,8 +1,8 @@
-import '../../../../core/services/storage_service.dart';
-import '../../../../core/utils/result.dart';
-import '../../../home/domain/wallpaper.dart';
-import '../../domain/repositories/wallpaper_repository.dart';
-import '../datasources/pollinations_datasource.dart';
+import 'package:yume_app/core/services/storage_service.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/create/data/datasources/pollinations_datasource.dart';
+import 'package:yume_app/features/create/domain/repositories/wallpaper_repository.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 /// Implementation of WallpaperRepository using Pollinations.ai
 class WallpaperRepositoryImpl implements WallpaperRepository {

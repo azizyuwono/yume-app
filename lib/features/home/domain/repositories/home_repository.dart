@@ -1,5 +1,5 @@
-import '../../../../core/utils/result.dart';
-import '../wallpaper.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 /// Repository for Home screen data
 abstract class HomeRepository {

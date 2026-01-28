@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../domain/wallpaper.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 /// Enhanced category chip with ripple effects and animations
 class CategoryChip extends StatefulWidget {
@@ -32,7 +32,7 @@ class _CategoryChipState extends State<CategoryChip>
       duration: const Duration(milliseconds: 150),
       vsync: this,
     );
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 0.95).animate(
+    _scaleAnimation = Tween<double>(begin: 1, end: 0.95).animate(
       CurvedAnimation(parent: _scaleController, curve: Curves.easeInOut),
     );
   }
@@ -93,7 +93,6 @@ class _CategoryChipState extends State<CategoryChip>
                       color: selectedBorder.withValues(alpha: 0.15),
                       blurRadius: 16,
                       offset: const Offset(0, 4),
-                      spreadRadius: 0,
                     ),
                     BoxShadow(
                       color: selectedBorder.withValues(alpha: 0.1),
@@ -114,7 +113,7 @@ class _CategoryChipState extends State<CategoryChip>
                     : FontWeight.w500,
                 color: widget.isSelected ? selectedText : unselectedText,
                 letterSpacing: 0.5,
-                height: 1.0,
+                height: 1,
               ),
             ),
           ),
@@ -157,7 +156,7 @@ class _CategoryChipsRowState extends State<CategoryChipsRow>
       final start = i * 0.1;
       final end = start + 0.4;
       _slideAnimations.add(
-        Tween<double>(begin: 40.0, end: 0.0).animate(
+        Tween<double>(begin: 40, end: 0).animate(
           CurvedAnimation(
             parent: _animController,
             curve: Interval(
