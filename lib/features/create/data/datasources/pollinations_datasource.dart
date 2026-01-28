@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:dio/dio.dart';
-import '../../../../core/utils/result.dart';
+import 'package:yume_app/core/utils/result.dart';
 
 /// DataSource for generating AI wallpapers via Pollinations.ai API
 /// Optimized for mobile phone wallpapers with robust error handling

@@ -1,9 +1,9 @@
 import 'dart:math';
 
-import '../../../../core/services/storage_service.dart';
-import '../../../../core/utils/result.dart';
-import '../../domain/repositories/home_repository.dart';
-import '../../domain/wallpaper.dart';
+import 'package:yume_app/core/services/storage_service.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/home/domain/repositories/home_repository.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 /// Implementation of HomeRepository using StorageService
 class HomeRepositoryImpl implements HomeRepository {
@@ -87,6 +87,6 @@ class HomeRepositoryImpl implements HomeRepository {
 
   @override
   Future<Result<void>> deleteWallpaper(String id) async {
-    return await storageService.deleteWallpaper(id);
+    return storageService.deleteWallpaper(id);
   }
 }

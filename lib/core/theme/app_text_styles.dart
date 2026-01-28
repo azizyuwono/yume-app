@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'app_colors.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
 
 /// Text styles for Yume app
 /// Header Font: Cinzel (elegant, dreamy feel) - BOLDER weights

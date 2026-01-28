@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../core/theme/app_colors.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
 
 /// Permission dialog untuk menginformasikan user sebelum request permission
 class PermissionDialog extends StatelessWidget {
@@ -69,7 +69,7 @@ class PermissionDialog extends StatelessWidget {
                     onPressed: () => Navigator.of(context).pop(false),
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 14),
-                      side: BorderSide(color: AppColors.grey300),
+                      side: const BorderSide(color: AppColors.grey300),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),

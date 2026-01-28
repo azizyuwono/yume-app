@@ -5,17 +5,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../core/constants/app_constants.dart';
-import '../../../core/services/image_download_service.dart';
-import '../../../core/services/snackbar_service.dart';
-import '../../../core/services/storage_service.dart';
-import '../../../core/services/wallpaper_service.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../../core/utils/result.dart';
-import '../../home/domain/wallpaper.dart';
-import 'widgets/action_card.dart';
-import 'widgets/glass_back_button.dart';
-import 'widgets/wallpaper_location_sheet.dart';
+import 'package:yume_app/core/constants/app_constants.dart';
+import 'package:yume_app/core/services/image_download_service.dart';
+import 'package:yume_app/core/services/snackbar_service.dart';
+import 'package:yume_app/core/services/storage_service.dart';
+import 'package:yume_app/core/services/wallpaper_service.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
+import 'package:yume_app/features/preview/presentation/widgets/action_card.dart';
+import 'package:yume_app/features/preview/presentation/widgets/glass_back_button.dart';
+import 'package:yume_app/features/preview/presentation/widgets/wallpaper_location_sheet.dart';
 
 /// Preview Screen - Museum Mode for fullscreen wallpaper viewing with Hero animation
 class PreviewScreen extends ConsumerStatefulWidget {
@@ -72,7 +72,7 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
         Tween<Offset>(begin: const Offset(0, 1), end: Offset.zero).animate(
           CurvedAnimation(
             parent: _slideController,
-            curve: const Interval(0.3, 1.0, curve: Curves.easeOutCubic),
+            curve: const Interval(0.3, 1, curve: Curves.easeOutCubic),
           ),
         );
 
@@ -88,7 +88,9 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
   }
 
   Future<void> _onDownload() async {
-    if (widget.imageUrl == null || _isDownloading) return;
+    if (widget.imageUrl == null || _isDownloading) {
+      return;
+    }
 
     setState(() => _isDownloading = true);
     HapticFeedback.lightImpact();
@@ -104,7 +106,9 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
       hdUrl,
     );
 
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     // Save to Hive storage if download successful
     if (result is Success) {
@@ -129,7 +133,9 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
   }
 
   void _showWallpaperLocationSheet() {
-    if (widget.imageUrl == null) return;
+    if (widget.imageUrl == null) {
+      return;
+    }
 
     HapticFeedback.lightImpact();
 
@@ -146,7 +152,9 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
   }
 
   Future<void> _onSetWallpaper(WallpaperLocation location) async {
-    if (widget.imageUrl == null || _isSettingWallpaper) return;
+    if (widget.imageUrl == null || _isSettingWallpaper) {
+      return;
+    }
 
     setState(() => _isSettingWallpaper = true);
     HapticFeedback.mediumImpact();
@@ -158,7 +166,9 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
       location,
     );
 
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     setState(() => _isSettingWallpaper = false);
 
@@ -316,8 +326,8 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
     // Layer 1: Low-res instant preview (from grid cache)
     // Layer 2: HD image fades in smoothly on top
     return InteractiveViewer(
-      minScale: 1.0,
-      maxScale: 4.0,
+      minScale: 1,
+      maxScale: 4,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -387,7 +397,9 @@ class _PreviewScreenState extends ConsumerState<PreviewScreen>
 
   /// Generate HD URL for download (always use best quality)
   String _getHdUrl() {
-    if (widget.imageUrl == null) return '';
+    if (widget.imageUrl == null) {
+      return '';
+    }
 
     final originalUrl = widget.imageUrl!;
     try {

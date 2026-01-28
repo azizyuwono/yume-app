@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../core/theme/app_colors.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
 
 /// Shimmer loading placeholder for wallpaper cards
 class ShimmerCard extends StatelessWidget {

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../core/theme/app_colors.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
 
 /// Wide pill-shaped Dream button with loading state, timer, and dynamic text
 class DreamButton extends StatefulWidget {

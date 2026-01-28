@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import '../../../../core/constants/app_constants.dart';
-import '../../../../core/utils/result.dart';
+import 'package:yume_app/core/constants/app_constants.dart';
+import 'package:yume_app/core/utils/result.dart';
 
 /// Mock data source that simulates API calls for development
 class MockWallpaperDataSource {
@@ -53,7 +53,7 @@ class MockWallpaperDataSource {
     try {
       // Simulate network delay
       await Future<void>.delayed(
-        Duration(milliseconds: AppConstants.mockDelayMs),
+        const Duration(milliseconds: AppConstants.mockDelayMs),
       );
 
       // Get images for the style, fallback to nature if not found

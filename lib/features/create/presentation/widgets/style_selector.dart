@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../domain/art_style.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
+import 'package:yume_app/features/create/domain/art_style.dart';
 
 /// Enhanced art style selector bubble with icon and gradient
 class StyleBubble extends StatelessWidget {
@@ -79,7 +79,6 @@ class StyleBubble extends StatelessWidget {
                           shape: BoxShape.circle,
                           border: Border.all(
                             color: Colors.white.withValues(alpha: 0.3),
-                            width: 1,
                           ),
                         ),
                       ),

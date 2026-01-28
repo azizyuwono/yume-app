@@ -23,7 +23,6 @@ class GlassBackButton extends StatelessWidget {
               color: Colors.white.withValues(alpha: 0.7),
               border: Border.all(
                 color: Colors.white.withValues(alpha: 0.3),
-                width: 1,
               ),
             ),
             child: const Icon(

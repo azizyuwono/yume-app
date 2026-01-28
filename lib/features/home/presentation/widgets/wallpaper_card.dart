@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../domain/wallpaper.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 /// Wallpaper card for the masonry grid with optional Hero animation
 class WallpaperCard extends StatefulWidget {
@@ -51,7 +51,9 @@ class _WallpaperCardState extends State<WallpaperCard>
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
 
     Future.delayed(widget.animationDelay, () {
-      if (mounted) _controller.forward();
+      if (mounted) {
+        _controller.forward();
+      }
     });
   }
 

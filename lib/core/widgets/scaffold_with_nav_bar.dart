@@ -1,7 +1,8 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 
 /// Floating Glass Navbar with blur effect and animated icons
 class ScaffoldWithNavBar extends StatelessWidget {
@@ -126,7 +127,7 @@ class _NavBarItem extends StatelessWidget {
               switchOutCurve: Curves.easeInCubic,
               transitionBuilder: (child, animation) {
                 return ScaleTransition(
-                  scale: Tween<double>(begin: 0.85, end: 1.0).animate(
+                  scale: Tween<double>(begin: 0.85, end: 1).animate(
                     CurvedAnimation(
                       parent: animation,
                       curve: Curves.easeOutBack,

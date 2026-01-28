@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 
-import '../../../home/domain/wallpaper.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 class LocalWallpaper extends HiveObject {
   late String id;

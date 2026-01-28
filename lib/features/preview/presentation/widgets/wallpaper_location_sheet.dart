@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../core/services/wallpaper_service.dart';
-import '../../../../core/theme/app_colors.dart';
+import 'package:yume_app/core/services/wallpaper_service.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
 
 /// Bottom sheet for selecting wallpaper location (Home/Lock/Both)
 class WallpaperLocationSheet extends StatelessWidget {
@@ -138,7 +138,7 @@ class _LocationOption extends StatelessWidget {
                   ],
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_forward_ios_rounded,
                 size: 16,
                 color: AppColors.grey400,

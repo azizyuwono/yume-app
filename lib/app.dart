@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'core/router/app_router.dart';
-import 'core/theme/theme.dart';
-import 'core/theme/theme_provider.dart';
+import 'package:yume_app/core/router/app_router.dart';
+import 'package:yume_app/core/theme/theme.dart';
+import 'package:yume_app/core/theme/theme_provider.dart';
 
 /// Yume App - AI Wallpaper Generator
 /// Japanese Minimalist Design with Dark Mode support

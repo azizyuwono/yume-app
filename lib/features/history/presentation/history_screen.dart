@@ -6,14 +6,13 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../../core/router/app_router.dart';
-import '../../../core/services/snackbar_service.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../home/domain/wallpaper.dart';
-import '../../home/presentation/home_providers.dart';
-import '../../home/presentation/widgets/wallpaper_card.dart';
-import '../../../core/widgets/sliver_shimmer_grid.dart';
+import 'package:yume_app/core/router/app_router.dart';
+import 'package:yume_app/core/services/snackbar_service.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
+import 'package:yume_app/core/widgets/sliver_shimmer_grid.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
+import 'package:yume_app/features/home/presentation/home_providers.dart';
+import 'package:yume_app/features/home/presentation/widgets/wallpaper_card.dart';
 
 /// History Screen - Shows all created and downloaded wallpapers
 class HistoryScreen extends ConsumerStatefulWidget {
@@ -59,7 +58,7 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen>
           'Delete Wallpaper?',
           style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.w600),
         ),
-        content: Text(
+        content: const Text(
           'This action cannot be undone.',
           style: TextStyle(color: AppColors.grey700, fontSize: 15),
         ),

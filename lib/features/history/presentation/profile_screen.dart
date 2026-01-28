@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../core/theme/app_colors.dart';
+import 'package:yume_app/core/theme/app_colors.dart';
 
 /// Profile Screen placeholder
 class ProfileScreen extends StatelessWidget {
@@ -27,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(color: AppColors.grey200, width: 2),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.person_outline,
                 size: 48,
                 color: AppColors.grey400,

@@ -5,11 +5,11 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../core/router/app_router.dart';
-import '../domain/entities/generation_state.dart';
-import 'create_providers.dart';
-import 'widgets/dream_button.dart';
-import 'widgets/style_selector.dart';
+import 'package:yume_app/core/router/app_router.dart';
+import 'package:yume_app/features/create/domain/entities/generation_state.dart';
+import 'package:yume_app/features/create/presentation/create_providers.dart';
+import 'package:yume_app/features/create/presentation/widgets/dream_button.dart';
+import 'package:yume_app/features/create/presentation/widgets/style_selector.dart';
 
 /// Create Screen - Blank Canvas for dreaming wallpapers with animations
 class CreateScreen extends ConsumerStatefulWidget {
@@ -42,7 +42,7 @@ class _CreateScreenState extends ConsumerState<CreateScreen>
     _headerFade = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(
         parent: _animController,
-        curve: const Interval(0.0, 0.4, curve: Curves.easeOut),
+        curve: const Interval(0, 0.4, curve: Curves.easeOut),
       ),
     );
 
@@ -50,7 +50,7 @@ class _CreateScreenState extends ConsumerState<CreateScreen>
         .animate(
           CurvedAnimation(
             parent: _animController,
-            curve: const Interval(0.0, 0.4, curve: Curves.easeOutCubic),
+            curve: const Interval(0, 0.4, curve: Curves.easeOutCubic),
           ),
         );
 
@@ -72,7 +72,7 @@ class _CreateScreenState extends ConsumerState<CreateScreen>
         .animate(
           CurvedAnimation(
             parent: _animController,
-            curve: const Interval(0.5, 1.0, curve: Curves.easeOutCubic),
+            curve: const Interval(0.5, 1, curve: Curves.easeOutCubic),
           ),
         );
 
@@ -88,7 +88,9 @@ class _CreateScreenState extends ConsumerState<CreateScreen>
 
   void _onDream() {
     final prompt = _promptController.text.trim();
-    if (prompt.isEmpty) return;
+    if (prompt.isEmpty) {
+      return;
+    }
 
     // Haptic feedback for button press
     HapticFeedback.mediumImpact();

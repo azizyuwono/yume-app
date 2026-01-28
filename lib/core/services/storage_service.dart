@@ -1,9 +1,8 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-import '../../features/create/data/models/local_wallpaper.dart';
-import '../../features/home/domain/wallpaper.dart';
-import '../utils/result.dart';
+import 'package:yume_app/core/utils/result.dart';
+import 'package:yume_app/features/create/data/models/local_wallpaper.dart';
+import 'package:yume_app/features/home/domain/wallpaper.dart';
 
 part 'storage_service.g.dart';
 
@@ -41,7 +40,9 @@ class StorageService {
   /// Get all saved wallpapers
   List<Wallpaper> getAllWallpapers() {
     try {
-      if (!_box.isOpen) return [];
+      if (!_box.isOpen) {
+        return [];
+      }
 
       final localWallpapers = _box.values.toList();
       // Sort by newest first (assuming id or insertion order)
